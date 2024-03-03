@@ -19,11 +19,10 @@ if ((side_1 + side_2 <= side_3) or (side_1 + side_3 <= side_2) or (side_3 + side
     print("This kind of triangle doesn't exist!")
 else:
     perimeter = side_1 + side_2 + side_3
-    # per --> perimetris naxevari
-    per = perimeter / 2                    
-    area = math.sqrt(per * (per - side_1) * (per - side_2) * (per - side_3))
+    
+    semi_perimeter = perimeter / 2                    
+    area = math.sqrt(semi_perimeter * (semi_perimeter - side_1) * (semi_perimeter - side_2) * (semi_perimeter - side_3))
     print("Perimeter of triangle:", perimeter, "\nArea of triangle:", area)
 
 
 
-    
