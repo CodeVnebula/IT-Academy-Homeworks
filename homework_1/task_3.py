@@ -23,3 +23,7 @@ else:
     per = perimeter / 2                    
     area = math.sqrt(per * (per - side_1) * (per - side_2) * (per - side_3))
     print("Perimeter of triangle:", perimeter, "\nArea of triangle:", area)
+
+
+
+    
