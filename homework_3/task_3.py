@@ -39,3 +39,4 @@ elif card == 12:
     print("King", end="", sep="")
 else:
     print("Ace", end="", sep="")
+    
