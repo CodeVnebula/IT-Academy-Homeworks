@@ -47,6 +47,7 @@ if year <= 2012 or (year == 2013 and month < 10):        # Forex library btc pri
 
 current_date = datetime.date.today()
 
+    # Making sure user doesn't enter date that hasn't came yet
 if (year > current_date.year) or \
    (year == current_date.year and month > current_date.month) or \
    (year == current_date.year and month == current_date.month and day > current_date.day):
