@@ -126,10 +126,10 @@ amount_of_usd_now = quantity_of_bought_btc * latest_price
 profit = amount_of_usd_now - usd_paid
 
 if profit > 0:
-    print("You earnt +", profit, "$")
+    print("You earnt +", "%.2f" % profit, "$", sep="")
 elif profit == 0:
-    print("You earnt ", profit, "$")
+    print("You earnt ", "%.2f" % profit, "$", sep="")
 else:
-    print("You loss -", profit, "$")
+    print("You loss -", "%.2f" % profit, "$", sep="")
 
 print()
