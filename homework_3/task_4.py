@@ -41,10 +41,17 @@ else:
              if day >= 1 and day <= 30:         # Min valid input = 1, Max valid input = 30
                 break
 
-if year <= 2013:         # Forex library btc price history before 2013.10.01 isn't avilable
-    if month < 10:      
-        print("Unfortunately we don't have data of Bitcoin price before 01.10.2013! Please Enter date after given date))")
+if year <= 2012 or (year == 2013 and month < 10):        # Forex library btc price history before 2013.10.01 isn't avilable
+        print("Unfortunately we don't have data of Bitcoin price before 01.10.2013! Please Enter date after given date))", end="\n\n")
         sys.exit(0)
+
+current_date = datetime.date.today()
+
+if (year > current_date.year) or \
+   (year == current_date.year and month > current_date.month) or \
+   (year == current_date.year and month == current_date.month and day > current_date.day):
+    print("The date you've entered hasn't come yet! Please enter date correctly!!!", end="\n\n")
+    sys.exit(0)
 
 while True:
     usd_paid = int(input("Enter Amount of USD you paid for bitcoin: "))
@@ -68,12 +75,20 @@ else:
 
 
 date_purchased = datetime.datetime(year, month, day)
-current_date = datetime.date.today()
+
+print("Current date: ", current_date, end="\n\n")
+
+
+
 
 
 bitcoin = BtcConverter()
 btc_previous_price = bitcoin.get_previous_price("USD", date_purchased)  # gets 1btc price in usd (previous)
 latest_price = bitcoin.get_latest_price("USD")                          # gets 1btc price in usd (latest)
+
+print("Price of 1BTC before: ", btc_previous_price, "$")
+print("Price of 1BTC currently: ", latest_price, "$", end="\n\n")
+
 
 """
     quantity of bought btc (previous) will be   
@@ -101,6 +116,7 @@ latest_price = bitcoin.get_latest_price("USD")                          # gets 1
                                     profit = 5 - 10.... profit = -5$.... so we have some money loss here (((:
 
 """
+
 
 quantity_of_bought_btc = usd_paid / btc_previous_price
 
