@@ -11,5 +11,4 @@ for i in range(2, n_term + 1):
     first = second
     second = next_
 
-print(next_)
-   
+print(next_) 
