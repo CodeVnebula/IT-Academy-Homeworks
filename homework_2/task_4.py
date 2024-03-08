@@ -21,4 +21,4 @@ elif number == 3:
     print(3)
 elif number == 2:
     print(2)
-    
+
