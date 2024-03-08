@@ -9,5 +9,4 @@ for i in range(1, gamers_quantity + 1):
     for j  in range(2):
         print(random.randint(1, 6), ' ', end="")
     print()
-     
       

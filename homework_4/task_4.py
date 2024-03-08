@@ -5,6 +5,7 @@ while True:
 
 first = 0 
 second = 1
+next_ = 0
 
 for i in range(2, n_term + 1):
     next_ = first + second
