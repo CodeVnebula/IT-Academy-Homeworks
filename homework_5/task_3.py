@@ -16,6 +16,4 @@ for i in range(0, n):
         else:
             print(i * left_side + middle + i * right_side, end='')
 
-    print()
-# 
-       
+    print()   
