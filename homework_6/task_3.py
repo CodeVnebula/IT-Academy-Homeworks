@@ -34,5 +34,4 @@ while True:
         break
     else:
         tries_left -= 1
-        print("Too low!  You got ", tries_left, ' tries left',  end='')
-      
+        print("Too low!  You got ", tries_left, ' tries left',  end='')    
