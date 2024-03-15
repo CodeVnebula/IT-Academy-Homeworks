@@ -5,9 +5,9 @@ while True:
 
 for i in range(1, n + 1):
     if i < 10:                          # Code from ln.7 to ln.10 does absolutely nothing 
-        print('', i, " - ", end="")     # but I implemented This part just for better readability 
+        print(' ', i, " - ", end="", sep="")     # but I implemented This part just for better readability 
     else:                               # Of given results in the end (As we aren't focused on efficiency)
-        print(i, " - ", end="")
+        print(i, " - ", end="", sep="")
 
     count = 0
     for j in range(1, i + 1):
