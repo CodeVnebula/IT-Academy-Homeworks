@@ -21,4 +21,5 @@ def main():
     print(f'GCD of {a} and {b} is {gcd_iter}')
     
 if __name__ == "__main__":
-    main()   
+    main()
+  
