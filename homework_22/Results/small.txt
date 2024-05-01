@@ -1,0 +1,12 @@
+John,Apples,5,2.50
+Alice,Toothbrush,2,3.99
+Bob,Notebook,1,8.50
+Michael,Pencils,4,1.25
+Sarah,Socks,2,5.00
+David,Coffee Mug,1,6.99
+Jennifer,Water Bottle,5,4.50
+Lauren,Phone Case,1,9.99
+Megan,Plants,6,7.99
+Ryan,Flashlight,2,6.50
+Rachel,Notebook,1,8.50
+Stephanie,Scissors,4,3.50
