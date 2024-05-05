@@ -45,17 +45,17 @@ def open_json(mode: str, data = {}) -> dict:
         exit()
   
 
-def error_log(errors: str):
+def error_log(errors: list):
     """Writes received errors into the 'errors-log.txt' file
 
     Args:
-        errors (str): Receives errors found while running the code 
+        errors (list): Receives errors list found while running the code 
     """
     
     path = "homework_23/errors-log.txt"
     try:
-        with open(path, "a") as file:
-            file.write(errors + "\n")
+        with open(path, "w") as file:
+            file.writelines(errors)
     except Exception as e:
         print(f"An error occurred: {e}")
                  
@@ -71,15 +71,16 @@ def handle_data(departments_data: dict) -> dict:
     """
     
     results = {}
+    errors = []
     
     for department in departments_data:
         department_name = departments_data[department]["name"]
         employees = departments_data[department]["employees"]
         
         if len(employees) == 0:
-            error = f"Department - '{department_name}' Employees field is empty!"
+            error = f"Department - '{department_name}' Employees field is empty!\n"
+            errors.append(error)
             print("Employees list empty error saved.")
-            error_log(error)
             continue
         
         count_non_digit_chars = 0
@@ -91,21 +92,25 @@ def handle_data(departments_data: dict) -> dict:
                     average_salary += int(employee_salary)
                 except ValueError:
                     count_non_digit_chars += 1
-                    error = f"Employee {employee['name']} Contains non-digit characters!"
+                    error = f"Employee {employee['name']} Contains non-digit characters!\n"
+                    errors.append(error)
                     print("Non-digit characters error saved.")
-                    error_log(error)
+                    
             except:
                 pass
         try:
             average_salary = average_salary / (len(employees) - count_non_digit_chars)
         except ZeroDivisionError:
-            error = f"Zero division error occured for calculating average salary for {department_name}"
+            error = f"Zero division error occured for calculating average salary for {department_name}\n"
+            errors.append(error)
             print("Zero division error saved.")
-            error_log(error)
+            
             continue
             
         results[department_name] = str(average_salary)
-            
+    
+    error_log(errors)        
+    
     return results
                 
     
