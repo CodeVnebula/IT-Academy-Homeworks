@@ -41,7 +41,12 @@ def which_meal_to_cook(recipes: dict) -> list:
 
 def where_to_buy_ingredients(markets: dict, ingredients: list):
     markets_to_aim = {}
-    route = []
+    available_ingredients = [ingredient for products in markets.values() for ingredient in products]
+        
+    for ingredient in ingredients:
+        if ingredient not in set(available_ingredients):
+            print("You can not buy ingredients for this meal in this ciry!")
+            return
     
     print("Finding best route for you in local city markets...")
     sleep(2)
@@ -53,15 +58,9 @@ def where_to_buy_ingredients(markets: dict, ingredients: list):
         
         max_common = max(markets_to_aim.values())
         
-        # If the maximum common ingredients found is 0, it means none of the markets have the ingredients
-        if max_common == 0:
-            print("You can't buy ingredients for this product in this city")
-            return  # Exiting the function as there's no point in continuing
-        
         for key, value in markets_to_aim.items():
             if value == max_common:
                 market = key
-                route.append(market)
                 break
         
         print(f"Go to {market} for:")
