@@ -1,0 +1,20 @@
+John,Apples,5,2.50
+Alice,Toothbrush,2,3.99
+Bob,Notebook,1,8.50
+Emily,T-shirt,3,12.99
+Michael,Pencils,4,1.25
+Sarah,Socks,2,5.00
+David,Coffee Mug,1,6.99
+Jennifer,Water Bottle,5,4.50
+Chris,Headphones,3,29.99
+Jessica,Alarm Clock,2,14.99
+Matthew,Sunglasses,3,18.75
+Amanda,Backpack,4,24.99
+James,Blanket,4,19.99
+Lauren,Phone Case,1,9.99
+Daniel,Earbuds,2,12.75
+Megan,Plants,6,7.99
+Ryan,Flashlight,2,6.50
+Rachel,Notebook,1,8.50
+Kevin,Umbrella,3,15.99
+Stephanie,Scissors,4,3.50

@@ -1,0 +1,8 @@
+Emily,T-shirt,3,12.99
+Chris,Headphones,3,29.99
+Jessica,Alarm Clock,2,14.99
+Matthew,Sunglasses,3,18.75
+Amanda,Backpack,4,24.99
+James,Blanket,4,19.99
+Daniel,Earbuds,2,12.75
+Kevin,Umbrella,3,15.99
